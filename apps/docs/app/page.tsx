@@ -1,17 +1,16 @@
-import Accordion from "@repo/ui/accordion";
+import Accordion from "@snap-ui/accordion";
 
 export default function Home() {
   return (
     <div>
       <Accordion.Root>
         <Accordion.Item>
-          Hola Mundo
+          <p>Hello World :D</p>
         </Accordion.Item>
         <Accordion.Item>
-          Chao Mundo
+          <p>Bye World :(</p>
         </Accordion.Item>
       </Accordion.Root>
-
     </div>
   );
 }
