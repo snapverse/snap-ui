@@ -1,8 +1,16 @@
-export const {{ pascalCase name }} = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <div>
-      <h1>{{ pascalCase name }} Component</h1>
-      {children}
-    </div>
-  );
-};
+import { createElement, forwardRef } from "react";
+
+import SnapUI from "#types";
+
+export interface {{ pascalCase name }}Props extends SnapUI.ComponentProps {}
+
+const {{ pascalCase name }} = forwardRef<HTMLDivElement, {{ pascalCase name}}Props>(
+  ({ children, ...props }, ref) => {
+    return createElement("div", { ...props, ref }, '<h1>{{ pascalCase name }} works!</h1>');
+  }
+);
+
+{{ pascalCase name }}.displayName = "@snapverse/{{ pascalCase name }}";
+
+export default {{ pascalCase name }};
+
